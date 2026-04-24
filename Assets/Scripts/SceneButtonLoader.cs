@@ -5,7 +5,7 @@ public class SceneButtonLoader : MonoBehaviour
 {
     public void LoadTrainingScene()
     {
-        SceneManager.LoadScene("TrainingScene");
+        SceneManager.LoadScene("Training Scene");
     }
 
     public void LoadTaskScene()

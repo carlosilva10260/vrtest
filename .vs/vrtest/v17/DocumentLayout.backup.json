@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\chher\\Github\\vrtest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\scripts\\newmonobehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\newmonobehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\rusty vehicles\\culloffalpha.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\rusty vehicles\\culloffalpha.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\scripts\\collecttargetinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\rusty vehicles\\info.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\rusty vehicles\\info.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\scenebuttonloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scenebuttonloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\collecttargetinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collecttargetinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -29,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\junkyard models\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\junkyard models\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -79,19 +91,55 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CullOffAlpha.shader",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\CullOffAlpha.shader",
+              "RelativeDocumentMoniker": "Assets\\Rusty Vehicles\\CullOffAlpha.shader",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\CullOffAlpha.shader",
+              "RelativeToolTip": "Assets\\Rusty Vehicles\\CullOffAlpha.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2026-04-23T13:59:42.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Info.txt",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\Info.txt",
+              "RelativeDocumentMoniker": "Assets\\Rusty Vehicles\\Info.txt",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\Info.txt",
+              "RelativeToolTip": "Assets\\Rusty Vehicles\\Info.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-23T13:53:02.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SceneButtonLoader.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SceneButtonLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneButtonLoader.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SceneButtonLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneButtonLoader.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAxwAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T21:55:37.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NewMonoBehaviourScript.cs",
               "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\NewMonoBehaviourScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\NewMonoBehaviourScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T21:47:15.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-05T21:47:15.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "BezierCurve.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\VRTemplateAssets\\Scripts\\BezierCurve.cs",
               "RelativeDocumentMoniker": "Assets\\VRTemplateAssets\\Scripts\\BezierCurve.cs",
@@ -103,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "BusDepositInteractable.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusDepositInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BusDepositInteractable.cs",
@@ -115,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "CollectTargetInteractable.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\CollectTargetInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollectTargetInteractable.cs",
@@ -123,12 +171,11 @@
               "RelativeToolTip": "Assets\\Scripts\\CollectTargetInteractable.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAIBJwB4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:25:03.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T10:25:03.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "BusCollectionManager.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusCollectionManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BusCollectionManager.cs",
@@ -140,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ReadMe.txt",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Junkyard models\\ReadMe.txt",
               "RelativeDocumentMoniker": "Assets\\Junkyard models\\ReadMe.txt",
@@ -152,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "SimpleLit.shader",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader",
@@ -164,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Lit.shader",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\Lit.shader",
@@ -176,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "GuardianTeleportManager.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianTeleportManager.cs",
@@ -188,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "RedirectCylinderInteract.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\RedirectCylinderInteract.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RedirectCylinderInteract.cs",
@@ -200,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "BoundaryRedirectTeleport.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BoundaryRedirectTeleport.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BoundaryRedirectTeleport.cs",
@@ -212,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "CylinderTeleport.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\CylinderTeleport.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CylinderTeleport.cs",
@@ -223,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "XRInteractionManager.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Interaction\\XRInteractionManager.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Interaction\\XRInteractionManager.cs",
@@ -235,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "SimulatedGuardianVisualizer.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SimulatedGuardianVisualizer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SimulatedGuardianVisualizer.cs",
@@ -247,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "TeleportSafetyValidator.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\TeleportSafetyValidator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TeleportSafetyValidator.cs",
@@ -259,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "GuardianSafetyManager.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianSafetyManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianSafetyManager.cs",
