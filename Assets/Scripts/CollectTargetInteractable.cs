@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class CollectTargetInteractable : MonoBehaviour
 {
     public BusCollectionManager collectionManager;
+    public Transform playerHead;
+    public float maxCollectDistance = 2.0f;
 
     private XRSimpleInteractable interactable;
 
@@ -26,9 +28,24 @@ public class CollectTargetInteractable : MonoBehaviour
 
     private void OnSelected(SelectEnterEventArgs args)
     {
+        if (playerHead == null)
+        {
+            Debug.LogWarning($"No playerHead assigned on {gameObject.name}");
+            return;
+        }
+
+        float distance = Vector3.Distance(playerHead.position, transform.position);
+
+        if (distance > maxCollectDistance)
+        {
+            Debug.Log($"Too far to collect {gameObject.name}. Distance: {distance:F2}");
+            return;
+        }
+
+        Debug.Log($"Target selected: {gameObject.name}");
+
         if (collectionManager != null)
         {
-            Debug.Log($"Target selected: {gameObject.name}");
             collectionManager.TryCollectTarget(gameObject);
         }
     }
