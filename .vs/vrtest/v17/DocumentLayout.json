@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\chher\\Github\\vrtest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\scripts\\guardianboundarycollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\guardianboundarycollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\grabbabletarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\grabbabletarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\scripts\\busdepositinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\busdepositinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\buscollectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buscollectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\busdepositinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\busdepositinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\CollectTargetInteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CollectTargetInteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\collecttargetinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collecttargetinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\guardianteleportpreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\guardianteleportpreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\rusty vehicles\\culloffalpha.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\rusty vehicles\\culloffalpha.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\teleportguardianintersectionmarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\teleportguardianintersectionmarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\guardianteleportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\guardianteleportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\guardianboundarycollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\guardianboundarycollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\rusty vehicles\\info.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -41,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\vrtemplateassets\\scripts\\beziercurve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\vrtemplateassets\\scripts\\beziercurve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\guardianteleportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\guardianteleportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\junkyard models\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -90,60 +98,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GuardianBoundaryCollider.cs",
-              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianBoundaryCollider.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianBoundaryCollider.cs",
-              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianBoundaryCollider.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GuardianBoundaryCollider.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T13:41:41.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CullOffAlpha.shader",
-              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\CullOffAlpha.shader",
-              "RelativeDocumentMoniker": "Assets\\Rusty Vehicles\\CullOffAlpha.shader",
-              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\CullOffAlpha.shader",
-              "RelativeToolTip": "Assets\\Rusty Vehicles\\CullOffAlpha.shader",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2026-04-23T13:59:42.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Info.txt",
-              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\Info.txt",
-              "RelativeDocumentMoniker": "Assets\\Rusty Vehicles\\Info.txt",
-              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\Info.txt",
-              "RelativeToolTip": "Assets\\Rusty Vehicles\\Info.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-04-23T13:53:02.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SceneButtonLoader.cs",
-              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SceneButtonLoader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneButtonLoader.cs",
-              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SceneButtonLoader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SceneButtonLoader.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAxwAcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T21:55:37.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NewMonoBehaviourScript.cs",
@@ -154,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "BezierCurve.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\VRTemplateAssets\\Scripts\\BezierCurve.cs",
               "RelativeDocumentMoniker": "Assets\\VRTemplateAssets\\Scripts\\BezierCurve.cs",
@@ -167,14 +126,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BusCollectionManager.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusCollectionManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BusCollectionManager.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusCollectionManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BusCollectionManager.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAawBIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T10:22:52.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TeleportGuardianIntersectionMarker.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\TeleportGuardianIntersectionMarker.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TeleportGuardianIntersectionMarker.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\TeleportGuardianIntersectionMarker.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TeleportGuardianIntersectionMarker.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAcwIgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:37:49.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BusDepositInteractable.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusDepositInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BusDepositInteractable.cs",
               "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusDepositInteractable.cs",
               "RelativeToolTip": "Assets\\Scripts\\BusDepositInteractable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:27:22.149Z"
+              "WhenOpened": "2026-03-31T10:27:22.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GuardianTeleportPreview.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportPreview.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianTeleportPreview.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportPreview.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GuardianTeleportPreview.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T10:21:48.542Z"
             },
             {
               "$type": "Document",
@@ -184,25 +180,74 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollectTargetInteractable.cs",
               "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\CollectTargetInteractable.cs",
               "RelativeToolTip": "Assets\\Scripts\\CollectTargetInteractable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAA5wDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-31T10:25:03.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BusCollectionManager.cs",
-              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusCollectionManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BusCollectionManager.cs",
-              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BusCollectionManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BusCollectionManager.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwE8AAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GrabbableTarget.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GrabbableTarget.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GrabbableTarget.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GrabbableTarget.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GrabbableTarget.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAiwFUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:22:52.653Z"
+              "WhenOpened": "2026-05-19T14:48:03.567Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
+              "Title": "SceneButtonLoader.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SceneButtonLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneButtonLoader.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SceneButtonLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneButtonLoader.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAxwAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T21:55:37.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Info.txt",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\Info.txt",
+              "RelativeDocumentMoniker": "Assets\\Rusty Vehicles\\Info.txt",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Rusty Vehicles\\Info.txt",
+              "RelativeToolTip": "Assets\\Rusty Vehicles\\Info.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-23T13:53:02.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GuardianTeleportManager.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianTeleportManager.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GuardianTeleportManager.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAAAB0BAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T10:54:33.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GuardianBoundaryCollider.cs",
+              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianBoundaryCollider.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianBoundaryCollider.cs",
+              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianBoundaryCollider.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GuardianBoundaryCollider.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T13:41:41.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "ReadMe.txt",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Junkyard models\\ReadMe.txt",
               "RelativeDocumentMoniker": "Assets\\Junkyard models\\ReadMe.txt",
@@ -214,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "SimpleLit.shader",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\SimpleLit.shader",
@@ -226,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Lit.shader",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@37e0d4fc2503\\Shaders\\Lit.shader",
@@ -238,19 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GuardianTeleportManager.cs",
-              "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianTeleportManager.cs",
-              "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GuardianTeleportManager.cs",
-              "ViewState": "AgIAACwBAAAAAAAAAAASwDwBAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:54:33.014Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "RedirectCylinderInteract.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\RedirectCylinderInteract.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RedirectCylinderInteract.cs",
@@ -262,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "BoundaryRedirectTeleport.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\BoundaryRedirectTeleport.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BoundaryRedirectTeleport.cs",
@@ -274,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "CylinderTeleport.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\CylinderTeleport.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CylinderTeleport.cs",
@@ -285,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "XRInteractionManager.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Interaction\\XRInteractionManager.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@5f736ad4ccd8\\Runtime\\Interaction\\XRInteractionManager.cs",
@@ -297,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "SimulatedGuardianVisualizer.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SimulatedGuardianVisualizer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SimulatedGuardianVisualizer.cs",
@@ -309,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "TeleportSafetyValidator.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\TeleportSafetyValidator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TeleportSafetyValidator.cs",
@@ -321,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "GuardianSafetyManager.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianSafetyManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianSafetyManager.cs",

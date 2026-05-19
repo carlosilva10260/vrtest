@@ -287,6 +287,42 @@ public class GuardianTeleportManager : MonoBehaviour
         return new Vector3(v.x, 0f, v.z);
     }
 
+    public Vector3 PredictFinalUserPosition(Vector3 selectedTeleportPos, Vector3 currentForward)
+{
+    Vector3 oldGuardianCenter = Flat(simulatedGuardian.position);
+    Vector3 oldUserPos = Flat(head.position);
+    Vector3 oldOffset = oldUserPos - oldGuardianCenter;
+
+    Vector3 newGuardianCenter = Flat(selectedTeleportPos);
+
+    Vector3 preservedUserPos =
+        ClampPointInsideGuardian(newGuardianCenter + oldOffset, newGuardianCenter);
+
+    Transform relevantTarget =
+        FindRelevantTargetInsideGuardian(newGuardianCenter, selectedTeleportPos, currentForward);
+
+    if (relevantTarget == null)
+        return preservedUserPos;
+
+    Vector3 targetPos = Flat(relevantTarget.position);
+
+    if (SupportsTargetSafely(newGuardianCenter, preservedUserPos, targetPos))
+        return preservedUserPos;
+
+    Vector3 adjustedUserPos = ComputeTargetSupportPosition(newGuardianCenter, targetPos);
+
+    if (!SupportsTargetSafely(newGuardianCenter, adjustedUserPos, targetPos))
+        return preservedUserPos;
+
+    return adjustedUserPos;
+}
+
+
+    public Vector3 PredictFinalGuardianCenter(Vector3 selectedTeleportPos)
+    {
+        return Flat(selectedTeleportPos);
+    }
+
     private void OnDrawGizmos()
     {
         if (!drawDebug || simulatedGuardian == null)

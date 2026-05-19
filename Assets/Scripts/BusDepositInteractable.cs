@@ -1,52 +1,27 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-[RequireComponent(typeof(XRSimpleInteractable))]
 public class BusDepositInteractable : MonoBehaviour
 {
-    public BusCollectionManager collectionManager;
-    public Transform playerHead;
-    public float maxDepositDistance = 2.0f;
+    [Header("Collection")]
+    public int totalTargets = 5;
+    public int collectedTargets = 0;
 
-    private XRSimpleInteractable interactable;
-
-    private void Awake()
+    private void OnTriggerEnter(Collider other)
     {
-        interactable = GetComponent<XRSimpleInteractable>();
-    }
+        GrabbableTarget target = other.GetComponentInParent<GrabbableTarget>();
 
-    private void OnEnable()
-    {
-        interactable.selectEntered.AddListener(OnSelected);
-    }
-
-    private void OnDisable()
-    {
-        interactable.selectEntered.RemoveListener(OnSelected);
-    }
-
-    private void OnSelected(SelectEnterEventArgs args)
-    {
-        if (playerHead == null)
-        {
-            Debug.LogWarning("No playerHead assigned on bus deposit.");
+        if (target == null)
             return;
-        }
 
-        float distance = Vector3.Distance(playerHead.position, transform.position);
+        collectedTargets++;
 
-        if (distance > maxDepositDistance)
+        Debug.Log($"Target collected {collectedTargets}/{totalTargets}: {target.name}");
+
+        target.gameObject.SetActive(false);
+
+        if (collectedTargets >= totalTargets)
         {
-            Debug.Log($"Too far from bus to deposit. Distance: {distance:F2}");
-            return;
-        }
-
-        Debug.Log("Bus selected for deposit.");
-
-        if (collectionManager != null)
-        {
-            collectionManager.TryDepositAtBus();
+            Debug.Log("All targets collected!");
         }
     }
 }
