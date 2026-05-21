@@ -44,6 +44,9 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
                 boundaryPoint +
                 directionToController * markerBackOffset +
                 Vector3.up * markerHeightOffset;
+
+            // Rotate patch according to the guardian wall the controller/ray is facing
+            marker.rotation = GetWallRotationFromLookDirection();
         }
         else
         {
@@ -78,12 +81,46 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
 
         if (bestDistance <= boundaryThreshold)
         {
-            boundaryPoint = ProjectToGuardianBoundaryXZ(bestPoint);
+            boundaryPoint = ProjectToFacingGuardianWall(bestPoint);
             boundaryPoint.y = bestPoint.y;
             return true;
         }
 
         return false;
+    }
+
+    private Vector3 ProjectToFacingGuardianWall(Vector3 worldPoint)
+    {
+        Vector3 local = simulatedGuardian.InverseTransformPoint(worldPoint);
+
+        float halfW = guardianWidth * 0.5f;
+        float halfD = guardianDepth * 0.5f;
+
+        Vector3 localForward = simulatedGuardian.InverseTransformDirection(
+            teleportInteractor.transform.forward
+        );
+
+        localForward.y = 0f;
+
+        if (localForward.sqrMagnitude > 0.0001f)
+            localForward.Normalize();
+        else
+            localForward = Vector3.forward;
+
+        if (Mathf.Abs(localForward.x) > Mathf.Abs(localForward.z))
+        {
+            // Facing left/right wall
+            local.x = Mathf.Sign(localForward.x) * halfW;
+            local.z = Mathf.Clamp(local.z, -halfD, halfD);
+        }
+        else
+        {
+            // Facing front/back wall
+            local.z = Mathf.Sign(localForward.z) * halfD;
+            local.x = Mathf.Clamp(local.x, -halfW, halfW);
+        }
+
+        return simulatedGuardian.TransformPoint(local);
     }
 
     private float DistanceToGuardianBoundaryXZ(Vector3 worldPoint)
@@ -93,40 +130,58 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
         float halfW = guardianWidth * 0.5f;
         float halfD = guardianDepth * 0.5f;
 
-        float dx = Mathf.Abs(Mathf.Abs(local.x) - halfW);
-        float dz = Mathf.Abs(Mathf.Abs(local.z) - halfD);
+        Vector3 localForward = simulatedGuardian.InverseTransformDirection(
+            teleportInteractor.transform.forward
+        );
 
-        bool insideX = Mathf.Abs(local.x) <= halfW;
-        bool insideZ = Mathf.Abs(local.z) <= halfD;
+        localForward.y = 0f;
 
-        if (insideX && insideZ)
-            return Mathf.Min(halfW - Mathf.Abs(local.x), halfD - Mathf.Abs(local.z));
+        if (localForward.sqrMagnitude > 0.0001f)
+            localForward.Normalize();
+        else
+            localForward = Vector3.forward;
 
-        if (insideX)
-            return dz;
-
-        if (insideZ)
-            return dx;
-
-        return Mathf.Sqrt(dx * dx + dz * dz);
+        if (Mathf.Abs(localForward.x) > Mathf.Abs(localForward.z))
+        {
+            // Distance to the wall the ray is facing on X axis
+            float targetX = Mathf.Sign(localForward.x) * halfW;
+            return Mathf.Abs(local.x - targetX);
+        }
+        else
+        {
+            // Distance to the wall the ray is facing on Z axis
+            float targetZ = Mathf.Sign(localForward.z) * halfD;
+            return Mathf.Abs(local.z - targetZ);
+        }
     }
 
-    private Vector3 ProjectToGuardianBoundaryXZ(Vector3 worldPoint)
+    private Quaternion GetWallRotationFromLookDirection()
     {
-        Vector3 local = simulatedGuardian.InverseTransformPoint(worldPoint);
+        Vector3 localForward = simulatedGuardian.InverseTransformDirection(
+            teleportInteractor.transform.forward
+        );
 
-        float halfW = guardianWidth * 0.5f;
-        float halfD = guardianDepth * 0.5f;
+        localForward.y = 0f;
 
-        float distToXEdge = Mathf.Abs(Mathf.Abs(local.x) - halfW);
-        float distToZEdge = Mathf.Abs(Mathf.Abs(local.z) - halfD);
-
-        if (distToXEdge < distToZEdge)
-            local.x = Mathf.Sign(local.x) * halfW;
+        if (localForward.sqrMagnitude > 0.0001f)
+            localForward.Normalize();
         else
-            local.z = Mathf.Sign(local.z) * halfD;
+            localForward = Vector3.forward;
 
-        return simulatedGuardian.TransformPoint(local);
+        Vector3 localNormal;
+
+        if (Mathf.Abs(localForward.x) > Mathf.Abs(localForward.z))
+        {
+            localNormal = new Vector3(Mathf.Sign(localForward.x), 0f, 0f);
+        }
+        else
+        {
+            localNormal = new Vector3(0f, 0f, Mathf.Sign(localForward.z));
+        }
+
+        Vector3 worldNormal = simulatedGuardian.TransformDirection(localNormal);
+
+        return Quaternion.LookRotation(worldNormal, Vector3.up);
     }
 
     private void HideMarker()

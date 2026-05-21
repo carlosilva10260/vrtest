@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class GuardianTeleportPreview : MonoBehaviour
@@ -16,7 +15,10 @@ public class GuardianTeleportPreview : MonoBehaviour
 
     [Header("Preview Objects")]
     public Transform guardianPreview;
-    public Transform landingDot;
+    public Transform landingPreview; // mannequin/player preview
+
+    [Header("Mannequin Rotation")]
+    public bool mannequinFacesBackwards = false;
 
     private void OnEnable()
     {
@@ -57,12 +59,7 @@ public class GuardianTeleportPreview : MonoBehaviour
                     Flat(head.forward)
                 );
 
-            // Same current logic as GuardianTeleportManager:
-            // guardian is centered on selected teleport point,
-            // user lands at the redirected/preserved final position.
-            Vector3 finalGuardianCenter = teleportPoint;
-
-            ShowPreview(finalGuardianCenter, finalUserPos);
+            ShowPreview(teleportPoint, finalUserPos);
         }
         else
         {
@@ -86,15 +83,26 @@ public class GuardianTeleportPreview : MonoBehaviour
             guardianPreview.localScale = simulatedGuardian.localScale;
         }
 
-        if (landingDot != null)
+        if (landingPreview != null)
         {
-            landingDot.gameObject.SetActive(true);
+            landingPreview.gameObject.SetActive(true);
 
-            landingDot.position = new Vector3(
+            landingPreview.position = new Vector3(
                 landingPosition.x,
-                landingDot.position.y,
+                landingPreview.position.y,
                 landingPosition.z
             );
+
+            Vector3 forward = head.forward;
+            forward.y = 0f;
+
+            if (forward.sqrMagnitude > 0.0001f)
+            {
+                landingPreview.rotation = Quaternion.LookRotation(forward.normalized, Vector3.up);
+
+                if (mannequinFacesBackwards)
+                    landingPreview.Rotate(0f, 180f, 0f);
+            }
         }
     }
 
@@ -103,8 +111,8 @@ public class GuardianTeleportPreview : MonoBehaviour
         if (guardianPreview != null)
             guardianPreview.gameObject.SetActive(false);
 
-        if (landingDot != null)
-            landingDot.gameObject.SetActive(false);
+        if (landingPreview != null)
+            landingPreview.gameObject.SetActive(false);
     }
 
     private Vector3 Flat(Vector3 v)
