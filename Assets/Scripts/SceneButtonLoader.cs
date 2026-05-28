@@ -8,9 +8,13 @@ public class SceneButtonLoader : MonoBehaviour
         SceneManager.LoadScene("Training Scene");
     }
 
-    public void LoadTaskScene()
+    public void LoadRedirectScene()
     {
-        SceneManager.LoadScene("Teste1");
+        SceneManager.LoadScene("AutoRedirectScene");
+    }
+    public void LoadPreviewScene()
+    {
+        SceneManager.LoadScene("TeleportPreviewScene");
     }
 
     public void QuitApplication()

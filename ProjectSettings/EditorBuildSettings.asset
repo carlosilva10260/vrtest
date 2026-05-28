@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Teste1.unity
     guid: 4e9fef26e6adb88479ad1b9834a32d94
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: b17614b5b7361884f9538f40cc858004
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Training Scene.unity
     guid: 5b5133bf783aaf146a68fbc8954e1483
   - enabled: 1
-    path: Assets/Scenes/Teste2.unity
+    path: Assets/Scenes/TeleportPreviewScene.unity
     guid: 4a509099b16840a4fa21bf42a16c32a8
+  - enabled: 1
+    path: Assets/Scenes/AutoRedirectScene.unity
+    guid: 16002e4b8939f8d49ae8259d562d0f38
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}

@@ -65,7 +65,7 @@ public class GrabbableTarget : MonoBehaviour
 
         if (!removedFromRedirectTargets && guardianTeleportManager != null)
         {
-            guardianTeleportManager.targets.Remove(transform);
+            guardianTeleportManager.RemoveTarget(transform);
             removedFromRedirectTargets = true;
             Debug.Log($"{gameObject.name} removed from redirection target list.");
         }
