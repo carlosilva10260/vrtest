@@ -17,6 +17,11 @@ public class SceneButtonLoader : MonoBehaviour
         SceneManager.LoadScene("TeleportPreviewScene");
     }
 
+    public void LoadBaselineScene()
+    {
+        SceneManager.LoadScene("BaselineScene");
+    }
+
     public void QuitApplication()
     {
         Application.Quit();

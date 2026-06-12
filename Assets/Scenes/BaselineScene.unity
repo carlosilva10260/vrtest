@@ -421,15 +421,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9197277337108667342, guid: 6e5b73b3f7a01d746bf76888c9539665, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.611
+      value: -0.459
       objectReference: {fileID: 0}
     - target: {fileID: 9197277337108667342, guid: 6e5b73b3f7a01d746bf76888c9539665, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14599997
+      value: -0.146
       objectReference: {fileID: 0}
     - target: {fileID: 9197277337108667342, guid: 6e5b73b3f7a01d746bf76888c9539665, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.9170003
+      value: 3.466
       objectReference: {fileID: 0}
     - target: {fileID: 9197277337108667342, guid: 6e5b73b3f7a01d746bf76888c9539665, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1804,15 +1804,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475998360808636, guid: abceb10e9c1c8504eb85132ddc32f9e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.28
+      value: -18.105724
       objectReference: {fileID: 0}
     - target: {fileID: 4475998360808636, guid: abceb10e9c1c8504eb85132ddc32f9e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: -0.8721263
       objectReference: {fileID: 0}
     - target: {fileID: 4475998360808636, guid: abceb10e9c1c8504eb85132ddc32f9e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.2
+      value: -6.7957473
       objectReference: {fileID: 0}
     - target: {fileID: 4475998360808636, guid: abceb10e9c1c8504eb85132ddc32f9e7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5263,7 +5263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b8756698b5f1b46afd8a187114ed95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardianTeleportPreview
-  guardianTeleportManager: {fileID: 1359930918}
+  guardianTeleportManager: {fileID: 0}
   teleportInteractor: {fileID: 870770306}
   simulatedGuardian: {fileID: 1420023371}
   head: {fileID: 63127845}
@@ -5303,7 +5303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &510413698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5316,7 +5316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b43eb802df8c7c4c87584f046786521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedirectCurvePreview
-  guardianTeleportManager: {fileID: 1359930918}
+  guardianTeleportManager: {fileID: 0}
   teleportInteractor: {fileID: 870770306}
   head: {fileID: 63127845}
   teleportModeInput: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f, type: 3}
@@ -10686,7 +10686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableTarget
   collectionManager: {fileID: 1941042317}
-  guardianTeleportManager: {fileID: 1359930918}
+  guardianTeleportManager: {fileID: 0}
   playerHead: {fileID: 63127845}
   targetArrow: {fileID: 251801233}
   maxGrabDistance: 2
@@ -15362,15 +15362,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4372016554456238, guid: 7d9bdc9846740b74cacf169d3e13cd3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.056
+      value: -12.603
       objectReference: {fileID: 0}
     - target: {fileID: 4372016554456238, guid: 7d9bdc9846740b74cacf169d3e13cd3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.896
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 4372016554456238, guid: 7d9bdc9846740b74cacf169d3e13cd3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.773
+      value: -4.709
       objectReference: {fileID: 0}
     - target: {fileID: 4372016554456238, guid: 7d9bdc9846740b74cacf169d3e13cd3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22129,23 +22129,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359930915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f31acfca7be9f43961cea9c43585c7, type: 3}
+  m_Script: {fileID: 11500000, guid: a952e9fa4083d0448bb7070f75f74c53, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GuardianTeleportManager_WithRedirection
+  m_EditorClassIdentifier: Assembly-CSharp::GuardianTeleportManager_Baseline
   xrOrigin: {fileID: 1075700744}
   head: {fileID: 63127845}
   simulatedGuardian: {fileID: 1420023371}
-  guardianCollider: {fileID: 1420023370}
-  targets:
-  - {fileID: 1783698913}
-  - {fileID: 2089518209}
-  - {fileID: 462646850}
-  - {fileID: 2102052853}
-  - {fileID: 704649747}
   teleportDetectionDistance: 0.75
-  targetSearchRadius: 1
-  insideMargin: 0.5
-  preferredTargetApproachDistance: 1.25
 --- !u!1001 &1366645516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22818,15 +22808,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619401555634764, guid: f3de6c932859d8940b5ba1d50fb8035b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.9
+      value: -16.8
       objectReference: {fileID: 0}
     - target: {fileID: 4619401555634764, guid: f3de6c932859d8940b5ba1d50fb8035b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: -1.215
       objectReference: {fileID: 0}
     - target: {fileID: 4619401555634764, guid: f3de6c932859d8940b5ba1d50fb8035b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4619401555634764, guid: f3de6c932859d8940b5ba1d50fb8035b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37466,7 +37456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableTarget
   collectionManager: {fileID: 1941042317}
-  guardianTeleportManager: {fileID: 1359930918}
+  guardianTeleportManager: {fileID: 0}
   playerHead: {fileID: 63127845}
   targetArrow: {fileID: 968507607}
   maxGrabDistance: 2
@@ -39734,7 +39724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableTarget
   collectionManager: {fileID: 1941042317}
-  guardianTeleportManager: {fileID: 1359930918}
+  guardianTeleportManager: {fileID: 0}
   playerHead: {fileID: 63127845}
   targetArrow: {fileID: 967651350}
   maxGrabDistance: 2
@@ -40888,7 +40878,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082026690}
         m_TargetAssemblyTypeName: SceneButtonLoader, Assembly-CSharp
-        m_MethodName: LoadPreviewScene
+        m_MethodName: LoadRedirectScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -40993,7 +40983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Baseline
+  m_text: TeleportPreview
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -41752,7 +41742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4763158655994060, guid: 0efd7d60d3f9393439fd3ad9d081d35c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.7
+      value: -17.8
       objectReference: {fileID: 0}
     - target: {fileID: 4763158655994060, guid: 0efd7d60d3f9393439fd3ad9d081d35c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41760,7 +41750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4763158655994060, guid: 0efd7d60d3f9393439fd3ad9d081d35c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.8
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 4763158655994060, guid: 0efd7d60d3f9393439fd3ad9d081d35c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42902,7 +42892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TeleportPreview
+  m_text: AutoRedirect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -43729,7 +43719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableTarget
   collectionManager: {fileID: 1941042317}
-  guardianTeleportManager: {fileID: 1359930918}
+  guardianTeleportManager: {fileID: 0}
   playerHead: {fileID: 63127845}
   targetArrow: {fileID: 1653306160}
   maxGrabDistance: 2
@@ -44094,7 +44084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableTarget
   collectionManager: {fileID: 1941042317}
-  guardianTeleportManager: {fileID: 1359930918}
+  guardianTeleportManager: {fileID: 0}
   playerHead: {fileID: 63127845}
   targetArrow: {fileID: 2056876057}
   maxGrabDistance: 2
@@ -44289,7 +44279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621403896921060, guid: 8e885bf6d3dd0cb4e8c89899b98fa1ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.2
+      value: -12.9
       objectReference: {fileID: 0}
     - target: {fileID: 4621403896921060, guid: 8e885bf6d3dd0cb4e8c89899b98fa1ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44297,7 +44287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621403896921060, guid: 8e885bf6d3dd0cb4e8c89899b98fa1ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.32
+      value: 3.9
       objectReference: {fileID: 0}
     - target: {fileID: 4621403896921060, guid: 8e885bf6d3dd0cb4e8c89899b98fa1ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44943,7 +44933,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082026690}
         m_TargetAssemblyTypeName: SceneButtonLoader, Assembly-CSharp
-        m_MethodName: LoadBaselineScene
+        m_MethodName: LoadPreviewScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

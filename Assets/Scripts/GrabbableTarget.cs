@@ -10,6 +10,9 @@ public class GrabbableTarget : MonoBehaviour
     public GuardianTeleportManager guardianTeleportManager;
     public Transform playerHead;
 
+    [Header("Arrow")]
+    public TargetArrow targetArrow;
+
     [Header("Grab Distance")]
     public float maxGrabDistance = 2.0f;
 
@@ -25,11 +28,13 @@ public class GrabbableTarget : MonoBehaviour
     private void OnEnable()
     {
         grabInteractable.selectEntered.AddListener(OnGrabbed);
+        grabInteractable.selectExited.AddListener(OnReleased);
     }
 
     private void OnDisable()
     {
         grabInteractable.selectEntered.RemoveListener(OnGrabbed);
+        grabInteractable.selectExited.RemoveListener(OnReleased);
     }
 
     private void OnGrabbed(SelectEnterEventArgs args)
@@ -52,7 +57,6 @@ public class GrabbableTarget : MonoBehaviour
         {
             Debug.Log($"Too far to grab {gameObject.name}. Distance: {distance:F2}");
 
-            // Force release if grabbed from too far
             grabInteractable.interactionManager.SelectExit(
                 args.interactorObject,
                 grabInteractable
@@ -63,12 +67,22 @@ public class GrabbableTarget : MonoBehaviour
 
         Debug.Log($"Grabbed target: {gameObject.name}");
 
+        if (targetArrow != null)
+            targetArrow.SetVisible(false);
+
         if (!removedFromRedirectTargets && guardianTeleportManager != null)
         {
             guardianTeleportManager.RemoveTarget(transform);
             removedFromRedirectTargets = true;
+
             Debug.Log($"{gameObject.name} removed from redirection target list.");
         }
+    }
+
+    private void OnReleased(SelectExitEventArgs args)
+    {
+        if (!delivered && targetArrow != null)
+            targetArrow.SetVisible(true);
     }
 
     public void Deliver()
