@@ -902,7 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuToggle
   menuCanvas: {fileID: 678710391}
   head: {fileID: 63127845}
-  pauseInput: {fileID: -8069514856583376848, guid: b6d5c44ebe3244b7692e81ae8265eb22, type: 3}
+  pauseInput: {fileID: -2965302816693655288, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   distanceFromUser: 2
   heightOffset: 0.5
 --- !u!4 &85358110

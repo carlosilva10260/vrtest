@@ -55,32 +55,47 @@ public class GuardianTeleportManager_ForPreview : GuardianTeleportManager
         Vector3 oldGuardianCenter = Flat(simulatedGuardian.position);
         Vector3 oldOffset = preTeleportHeadPos - oldGuardianCenter;
 
-        // Scene 1 logic:
-        // teleport point becomes guardian center
-        Vector3 newGuardianCenter = selectedTeleportPos;
+        // Guardian is built at the selected teleport point
+        Vector3 newGuardianCenter = Flat(selectedTeleportPos);
 
-        // user is shifted to preserve previous position inside guardian
-        Vector3 finalUserPos = ClampPointInsideGuardian(newGuardianCenter + oldOffset, newGuardianCenter);
+        // User is placed inside that new guardian preserving their previous offset
+        Vector3 finalUserPos =
+            ClampPointInsideGuardian(newGuardianCenter + oldOffset, newGuardianCenter);
 
         SetGuardianCenter(newGuardianCenter);
         MoveHeadXZTo(finalUserPos);
 
-        Debug.Log("Scene 1 teleport: guardian centered on teleport point, user position preserved. No redirection.");
+        Debug.Log("Preview scene teleport: guardian centered on teleport point, user offset preserved.");
     }
 
     public override Vector3 PredictFinalUserPosition(Vector3 selectedTeleportPos, Vector3 currentForward)
     {
         Vector3 oldGuardianCenter = Flat(simulatedGuardian.position);
+
+        // For preview, use the real current head position so physical movement
+        // changes where the mannequin appears inside the fixed preview guardian.
         Vector3 oldUserPos = Flat(head.position);
         Vector3 oldOffset = oldUserPos - oldGuardianCenter;
 
         Vector3 newGuardianCenter = Flat(selectedTeleportPos);
-        return ClampPointInsideGuardian(newGuardianCenter + oldOffset, newGuardianCenter);
+
+        return ClampPointInsideGuardian(
+            newGuardianCenter + oldOffset,
+            newGuardianCenter
+        );
     }
 
     public override Vector3 PredictFinalGuardianCenter(Vector3 selectedTeleportPos, Vector3 currentForward)
     {
+        // IMPORTANT:
+        // The preview guardian must stay exactly where the ray is pointing.
+        // It should not move when the user moves their head/body.
         return Flat(selectedTeleportPos);
+    }
+
+    public override void RemoveTarget(Transform target)
+    {
+        // Preview scene has no redirection target logic.
     }
 
     private Vector3 ClampPointInsideGuardian(Vector3 point, Vector3 guardianCenter)
@@ -111,22 +126,19 @@ public class GuardianTeleportManager_ForPreview : GuardianTeleportManager
     {
         Vector3 currentHeadXZ = Flat(head.position);
         Vector3 deltaXZ = desiredHeadXZ - currentHeadXZ;
+
         xrOrigin.position += new Vector3(deltaXZ.x, 0f, deltaXZ.z);
     }
 
     private void SetGuardianCenter(Vector3 flatCenter)
     {
         Vector3 current = simulatedGuardian.position;
-        simulatedGuardian.position = new Vector3(flatCenter.x, current.y, flatCenter.z);
+        simulatedGuardian.position =
+            new Vector3(flatCenter.x, current.y, flatCenter.z);
     }
 
     private Vector3 Flat(Vector3 v)
     {
         return new Vector3(v.x, 0f, v.z);
-    }
-
-    public override void RemoveTarget(Transform target)
-    {
-        // Scene 1 has no redirection targets, so nothing needed.
     }
 }

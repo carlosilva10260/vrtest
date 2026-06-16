@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 [RequireComponent(typeof(LineRenderer))]
 public class RedirectCurvePreview : MonoBehaviour
@@ -76,6 +77,13 @@ public class RedirectCurvePreview : MonoBehaviour
             return;
         }
 
+        if (!IsValidTeleportHit(hit))
+        {
+            HideCurve();
+            HideLandingMannequin();
+            return;
+        }
+
         Vector3 teleportPoint = Flat(hit.point);
 
         Vector3 redirectedPosition =
@@ -98,6 +106,20 @@ public class RedirectCurvePreview : MonoBehaviour
 
         DrawCurve(teleportPoint, redirectedPosition);
         ShowLandingMannequin(redirectedPosition);
+    }
+
+    private bool IsValidTeleportHit(RaycastHit hit)
+    {
+        if (hit.collider == null)
+            return false;
+
+        if (hit.collider.GetComponentInParent<TeleportationArea>() != null)
+            return true;
+
+        if (hit.collider.GetComponentInParent<TeleportationAnchor>() != null)
+            return true;
+
+        return false;
     }
 
     private void DrawCurve(Vector3 start, Vector3 end)

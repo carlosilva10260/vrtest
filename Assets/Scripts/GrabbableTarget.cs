@@ -16,13 +16,20 @@ public class GrabbableTarget : MonoBehaviour
     [Header("Grab Distance")]
     public float maxGrabDistance = 2.0f;
 
+    [Header("Teleport Ray Blocking Fix")]
+    public bool disableCollidersWhileGrabbed = true;
+    public float reenableColliderDelay = 0.15f;
+
     private XRGrabInteractable grabInteractable;
+    private Collider[] targetColliders;
+
     private bool removedFromRedirectTargets = false;
     private bool delivered = false;
 
     private void Awake()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
+        targetColliders = GetComponentsInChildren<Collider>();
     }
 
     private void OnEnable()
@@ -70,6 +77,9 @@ public class GrabbableTarget : MonoBehaviour
         if (targetArrow != null)
             targetArrow.SetVisible(false);
 
+        if (disableCollidersWhileGrabbed)
+            SetTargetColliders(false);
+
         if (!removedFromRedirectTargets && guardianTeleportManager != null)
         {
             guardianTeleportManager.RemoveTarget(transform);
@@ -83,6 +93,24 @@ public class GrabbableTarget : MonoBehaviour
     {
         if (!delivered && targetArrow != null)
             targetArrow.SetVisible(true);
+
+        if (disableCollidersWhileGrabbed)
+            Invoke(nameof(ReenableColliders), reenableColliderDelay);
+    }
+
+    private void ReenableColliders()
+    {
+        if (!delivered)
+            SetTargetColliders(true);
+    }
+
+    private void SetTargetColliders(bool enabled)
+    {
+        foreach (Collider col in targetColliders)
+        {
+            if (col != null)
+                col.enabled = enabled;
+        }
     }
 
     public void Deliver()
