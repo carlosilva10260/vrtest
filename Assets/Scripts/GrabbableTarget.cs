@@ -8,13 +8,12 @@ public class GrabbableTarget : MonoBehaviour
     [Header("References")]
     public BusCollectionManager collectionManager;
     public GuardianTeleportManager guardianTeleportManager;
-    public Transform playerHead;
 
     [Header("Arrow")]
     public TargetArrow targetArrow;
 
     [Header("Grab Distance")]
-    public float maxGrabDistance = 2.0f;
+    public float maxGrabDistance = 0.2f;
 
     [Header("Teleport Ray Blocking Fix")]
     public bool disableCollidersWhileGrabbed = true;
@@ -49,20 +48,19 @@ public class GrabbableTarget : MonoBehaviour
         if (delivered)
             return;
 
-        if (playerHead == null)
-        {
-            Debug.LogWarning($"No playerHead assigned on {gameObject.name}");
-            return;
-        }
+        Vector3 handPos = args.interactorObject.transform.position;
 
-        float distance = Vector3.Distance(
-            new Vector3(playerHead.position.x, 0f, playerHead.position.z),
-            new Vector3(transform.position.x, 0f, transform.position.z)
-        );
+        Vector3 targetPos = transform.position;
+
+        Collider targetCollider = GetComponentInChildren<Collider>();
+        if (targetCollider != null)
+            targetPos = targetCollider.bounds.center;
+
+        float distance = Vector3.Distance(handPos, targetPos);
 
         if (distance > maxGrabDistance)
         {
-            Debug.Log($"Too far to grab {gameObject.name}. Distance: {distance:F2}");
+            Debug.Log($"Too far to grab {gameObject.name}. Hand distance: {distance:F2}");
 
             grabInteractable.interactionManager.SelectExit(
                 args.interactorObject,

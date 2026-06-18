@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\chher\\Github\\vrtest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\guardianteleportpreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\grabbabletarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\grabbabletarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\scripts\\guardianteleportpreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\guardianteleportpreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|c:\\users\\chher\\github\\vrtest\\assets\\scripts\\pausemenutoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\pausemenutoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausemenutoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\targetarrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\targetarrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\grabbabletarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\grabbabletarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE16E6C1-8D1D-0170-AACA-B2009CD4154C}|Assembly-CSharp.csproj|C:\\Users\\chher\\Github\\vrtest\\assets\\scripts\\redirectcurvepreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PauseMenuToggle.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\PauseMenuToggle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenuToggle.cs",
@@ -78,12 +78,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PauseMenuToggle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T13:22:35.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T13:22:35.596Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SceneButtonLoader.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\SceneButtonLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SceneButtonLoader.cs",
@@ -107,15 +106,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "GrabbableTarget.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GrabbableTarget.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GrabbableTarget.cs",
               "ToolTip": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GrabbableTarget.cs",
               "RelativeToolTip": "Assets\\Scripts\\GrabbableTarget.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAiwGMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAvwCcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T14:05:07.103Z"
+              "WhenOpened": "2026-05-25T14:05:07.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -155,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GuardianTeleportPreview.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportPreview.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianTeleportPreview.cs",
@@ -180,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TargetArrow.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\TargetArrow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TargetArrow.cs",
@@ -192,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GuardianTeleportManager_Baseline.cs",
               "DocumentMoniker": "C:\\Users\\chher\\Github\\vrtest\\Assets\\Scripts\\GuardianTeleportManager_Baseline.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GuardianTeleportManager_Baseline.cs",
