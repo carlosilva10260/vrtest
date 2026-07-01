@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class TeleportGuardianIntersectionMarker : MonoBehaviour
@@ -8,19 +9,48 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
     public Transform simulatedGuardian;
     public Transform marker;
 
+    [Header("Input")]
+    public InputActionReference teleportModeInput;
+
     [Header("Guardian Size")]
     public float guardianWidth = 3f;
     public float guardianDepth = 3f;
 
     [Header("Detection")]
     public float boundaryThreshold = 0.15f;
+    public int extraSamplesPerSegment = 5;
+
+    [Header("Marker")]
     public float markerHeightOffset = 0.03f;
     public float markerBackOffset = 0.25f;
 
     private Vector3[] linePoints = new Vector3[128];
 
+    private void Awake()
+    {
+        if (teleportInteractor == null)
+            teleportInteractor = GetComponent<XRRayInteractor>();
+    }
+
+    private void OnEnable()
+    {
+        if (teleportModeInput != null)
+            teleportModeInput.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        HideMarker();
+    }
+
     private void Update()
     {
+        if (teleportModeInput == null || !teleportModeInput.action.IsPressed())
+        {
+            HideMarker();
+            return;
+        }
+
         if (teleportInteractor == null || simulatedGuardian == null || marker == null)
         {
             HideMarker();
@@ -45,7 +75,6 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
                 directionToController * markerBackOffset +
                 Vector3.up * markerHeightOffset;
 
-            // Rotate patch according to the guardian wall the controller/ray is facing
             marker.rotation = GetWallRotationFromLookDirection();
         }
         else
@@ -67,15 +96,25 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
         float bestDistance = float.MaxValue;
         Vector3 bestPoint = Vector3.zero;
 
-        for (int i = 0; i < count; i++)
-        {
-            Vector3 p = linePoints[i];
-            float distance = DistanceToGuardianBoundaryXZ(p);
+        int samples = Mathf.Max(1, extraSamplesPerSegment);
 
-            if (distance < bestDistance)
+        for (int i = 0; i < count - 1; i++)
+        {
+            Vector3 a = linePoints[i];
+            Vector3 b = linePoints[i + 1];
+
+            for (int s = 0; s <= samples; s++)
             {
-                bestDistance = distance;
-                bestPoint = p;
+                float t = s / (float)samples;
+                Vector3 p = Vector3.Lerp(a, b, t);
+
+                float distance = DistanceToGuardianBoundaryXZ(p);
+
+                if (distance < bestDistance)
+                {
+                    bestDistance = distance;
+                    bestPoint = p;
+                }
             }
         }
 
@@ -96,9 +135,8 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
         float halfW = guardianWidth * 0.5f;
         float halfD = guardianDepth * 0.5f;
 
-        Vector3 localForward = simulatedGuardian.InverseTransformDirection(
-            teleportInteractor.transform.forward
-        );
+        Vector3 localForward =
+            simulatedGuardian.InverseTransformDirection(teleportInteractor.transform.forward);
 
         localForward.y = 0f;
 
@@ -109,13 +147,11 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
 
         if (Mathf.Abs(localForward.x) > Mathf.Abs(localForward.z))
         {
-            // Facing left/right wall
             local.x = Mathf.Sign(localForward.x) * halfW;
             local.z = Mathf.Clamp(local.z, -halfD, halfD);
         }
         else
         {
-            // Facing front/back wall
             local.z = Mathf.Sign(localForward.z) * halfD;
             local.x = Mathf.Clamp(local.x, -halfW, halfW);
         }
@@ -130,9 +166,8 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
         float halfW = guardianWidth * 0.5f;
         float halfD = guardianDepth * 0.5f;
 
-        Vector3 localForward = simulatedGuardian.InverseTransformDirection(
-            teleportInteractor.transform.forward
-        );
+        Vector3 localForward =
+            simulatedGuardian.InverseTransformDirection(teleportInteractor.transform.forward);
 
         localForward.y = 0f;
 
@@ -143,13 +178,11 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
 
         if (Mathf.Abs(localForward.x) > Mathf.Abs(localForward.z))
         {
-            // Distance to the wall the ray is facing on X axis
             float targetX = Mathf.Sign(localForward.x) * halfW;
             return Mathf.Abs(local.x - targetX);
         }
         else
         {
-            // Distance to the wall the ray is facing on Z axis
             float targetZ = Mathf.Sign(localForward.z) * halfD;
             return Mathf.Abs(local.z - targetZ);
         }
@@ -157,9 +190,8 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
 
     private Quaternion GetWallRotationFromLookDirection()
     {
-        Vector3 localForward = simulatedGuardian.InverseTransformDirection(
-            teleportInteractor.transform.forward
-        );
+        Vector3 localForward =
+            simulatedGuardian.InverseTransformDirection(teleportInteractor.transform.forward);
 
         localForward.y = 0f;
 
@@ -171,13 +203,9 @@ public class TeleportGuardianIntersectionMarker : MonoBehaviour
         Vector3 localNormal;
 
         if (Mathf.Abs(localForward.x) > Mathf.Abs(localForward.z))
-        {
             localNormal = new Vector3(Mathf.Sign(localForward.x), 0f, 0f);
-        }
         else
-        {
             localNormal = new Vector3(0f, 0f, Mathf.Sign(localForward.z));
-        }
 
         Vector3 worldNormal = simulatedGuardian.TransformDirection(localNormal);
 

@@ -20,6 +20,15 @@ public class GuardianTeleportManager_WithRedirection : GuardianTeleportManager
     public float insideMargin = 0.5f;
     public float preferredTargetApproachDistance = 2.5f;
 
+    [Header("Redirect Position Validation")]
+    public bool validateRedirectedPosition = true;
+    public float playerRadius = 0.25f;
+    public float playerHeight = 1.7f;
+    public float floorRayHeight = 1.5f;
+    public float maxFloorRayDistance = 3f;
+    public Collider floorCollider;
+    public Collider planeCollider;
+
     private Vector3 previousHeadPosXZ;
     private bool initialized;
 
@@ -120,11 +129,6 @@ public class GuardianTeleportManager_WithRedirection : GuardianTeleportManager
 
         teleportToTargetDir.Normalize();
 
-        // IMPORTANT:
-        // Previous version used targetPos - dir * distance.
-        // This placed the user BETWEEN teleport point and target.
-        // This version uses targetPos + dir * distance.
-        // This places the user PAST the target, so the target is behind/in front depending on turn.
         Vector3 redirectedUserPos =
             targetPos + teleportToTargetDir * preferredTargetApproachDistance;
 
@@ -134,7 +138,110 @@ public class GuardianTeleportManager_WithRedirection : GuardianTeleportManager
         Debug.Log($"Redirected user pos = {redirectedUserPos}");
         Debug.Log($"Redirection distance = {Vector3.Distance(baseUserPos, redirectedUserPos):F2}");
 
+        if (validateRedirectedPosition && !IsValidRedirectPosition(redirectedUserPos))
+        {
+            Debug.LogWarning($"Redirected position invalid. Falling back to original teleport point.");
+            return baseUserPos;
+        }
+
         return redirectedUserPos;
+    }
+
+    private bool IsValidRedirectPosition(Vector3 candidateXZ)
+    {
+        Vector3 candidate = new Vector3(candidateXZ.x, head.position.y, candidateXZ.z);
+
+        if (planeCollider != null && !IsInsideColliderXZ(candidateXZ, planeCollider))
+        {
+            Debug.LogWarning("Redirect invalid: outside plane bounds.");
+            return false;
+        }
+
+        if (floorCollider != null && !IsAboveFloor(candidateXZ))
+        {
+            Debug.LogWarning("Redirect invalid: no floor under candidate.");
+            return false;
+        }
+
+        Vector3 bottom = new Vector3(candidate.x, candidate.y + 0.05f, candidate.z);
+        Vector3 top = new Vector3(candidate.x, candidate.y + playerHeight, candidate.z);
+
+        Collider[] hits = Physics.OverlapCapsule(
+            bottom,
+            top,
+            playerRadius,
+            ~0,
+            QueryTriggerInteraction.Ignore
+        );
+
+        foreach (Collider hit in hits)
+        {
+            if (hit == null)
+                continue;
+
+            if (ShouldIgnoreColliderForRedirectValidation(hit))
+                continue;
+
+            Debug.LogWarning($"Redirect invalid: overlaps {hit.name}");
+            return false;
+        }
+
+        return true;
+    }
+
+    private bool IsAboveFloor(Vector3 candidateXZ)
+    {
+        Vector3 rayStart = new Vector3(
+            candidateXZ.x,
+            head.position.y + floorRayHeight,
+            candidateXZ.z
+        );
+
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, maxFloorRayDistance, ~0, QueryTriggerInteraction.Ignore))
+        {
+            return hit.collider == floorCollider;
+        }
+
+        return false;
+    }
+
+    private bool IsInsideColliderXZ(Vector3 pointXZ, Collider col)
+    {
+        Bounds b = col.bounds;
+
+        return pointXZ.x >= b.min.x &&
+               pointXZ.x <= b.max.x &&
+               pointXZ.z >= b.min.z &&
+               pointXZ.z <= b.max.z;
+    }
+
+    private bool ShouldIgnoreColliderForRedirectValidation(Collider col)
+    {
+        if (col == floorCollider)
+            return true;
+
+        if (col == planeCollider)
+            return true;
+
+        if (col == guardianCollider)
+            return true;
+
+        if (col.transform == xrOrigin || col.transform.IsChildOf(xrOrigin))
+            return true;
+
+        if (col.transform == simulatedGuardian || col.transform.IsChildOf(simulatedGuardian))
+            return true;
+
+        foreach (Transform t in targets)
+        {
+            if (t == null)
+                continue;
+
+            if (col.transform == t || col.transform.IsChildOf(t))
+                return true;
+        }
+
+        return false;
     }
 
     private Transform FindRelevantTargetNearTeleportPoint(Vector3 teleportPoint)
