@@ -8,9 +8,14 @@ public class GuardianBoundaryCollider : MonoBehaviour
     public float teleportDetectionDistance = 0.75f;
     public float teleportIgnoreTime = 0.3f;
 
+    [Header("Logging")]
+    public bool logGuardianCollisions = true;
+    public float collisionLogCooldown = 1.0f;
+
     private BoxCollider guardianCollider;
     private Vector3 previousHeadPos;
     private float ignoreClampUntil;
+    private float lastCollisionLogTime = -999f;
 
     void Awake()
     {
@@ -26,7 +31,6 @@ public class GuardianBoundaryCollider : MonoBehaviour
     {
         Vector3 currentHeadPos = Flat(head.position);
 
-        // Detect teleport / sudden jump
         if (Vector3.Distance(currentHeadPos, previousHeadPos) > teleportDetectionDistance)
         {
             ignoreClampUntil = Time.time + teleportIgnoreTime;
@@ -36,7 +40,6 @@ public class GuardianBoundaryCollider : MonoBehaviour
 
         previousHeadPos = currentHeadPos;
 
-        // Do not clamp immediately after teleport
         if (Time.time < ignoreClampUntil)
             return;
 
@@ -55,6 +58,16 @@ public class GuardianBoundaryCollider : MonoBehaviour
 
         if (clampedLocal != local)
         {
+            if (logGuardianCollisions && Time.time - lastCollisionLogTime >= collisionLogCooldown)
+            {
+                lastCollisionLogTime = Time.time;
+
+                if (ExperimentLogger.Instance != null)
+                    ExperimentLogger.Instance.LogGuardianCollision();
+
+                Debug.Log("Guardian boundary collision logged");
+            }
+
             Vector3 clampedWorld = transform.TransformPoint(clampedLocal);
 
             Vector3 correction = clampedWorld - headPos;

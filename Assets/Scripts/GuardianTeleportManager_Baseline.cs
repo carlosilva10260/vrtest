@@ -44,6 +44,9 @@ public class GuardianTeleportManager_Baseline : GuardianTeleportManager
 
     private void HandleTeleport(Vector3 preTeleportHeadPos, Vector3 postTeleportHeadPos)
     {
+        if (ExperimentLogger.Instance != null)
+            ExperimentLogger.Instance.LogTeleport("N/A");
+
         Vector3 oldGuardianCenter = Flat(simulatedGuardian.position);
 
         // User's old relative position inside the previous guardian

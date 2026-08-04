@@ -68,6 +68,13 @@ public class GuardianTeleportManager_WithRedirection : GuardianTeleportManager
 
         Vector3 finalUserPos = CalculateFinalUserPosition(postTeleportHeadPos, oldOffset);
         Vector3 finalGuardianCenter = finalUserPos - oldOffset;
+        bool wasRedirected = finalUserPos != postTeleportHeadPos;
+
+        if (ExperimentLogger.Instance != null)
+        {
+            Debug.Log("TP logged");
+            ExperimentLogger.Instance.LogTeleport(wasRedirected ? "Redirected" : "StandardTP");
+        }
 
         SetGuardianCenter(finalGuardianCenter);
         MoveHeadXZTo(finalUserPos);
@@ -157,11 +164,7 @@ public class GuardianTeleportManager_WithRedirection : GuardianTeleportManager
             return false;
         }
 
-        if (floorCollider != null && !IsAboveFloor(candidateXZ))
-        {
-            Debug.LogWarning("Redirect invalid: no floor under candidate.");
-            return false;
-        }
+        
 
         Vector3 bottom = new Vector3(candidate.x, candidate.y + 0.05f, candidate.z);
         Vector3 top = new Vector3(candidate.x, candidate.y + playerHeight, candidate.z);
